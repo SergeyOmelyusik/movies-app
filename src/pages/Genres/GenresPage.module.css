@@ -1,0 +1,43 @@
+.genresList {
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.genreItem,
+.genreItemActive {
+    min-width: 130px;
+    padding: 5px 10px;
+    margin: 10px;
+    cursor: pointer;
+    border: 2px solid rgba(247, 66, 66, 0.6);
+    border-radius: 10px;
+    position: relative;
+}
+
+.genreItem::after {
+    content: '+';
+    position: absolute;
+    right: 10px;
+}
+
+.genreItemActive {  
+    border: 2px solid rgba(247, 66, 66, 0.3);
+}
+
+.genreItemActive::after {
+    content: '-';
+    position: absolute;
+    right: 10px;
+}
+
+.movieList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    margin-bottom: 20px;
+}

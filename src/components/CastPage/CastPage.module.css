@@ -1,0 +1,142 @@
+.castPage {
+    display: flex;
+    flex-direction: column;
+}
+
+.castInfo {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10%;
+    align-items: flex-start;
+}
+
+.castPhoto {
+   max-width: 300px;
+   height: auto;
+   margin-bottom: 30px;
+}
+
+.castPhoto img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.biography {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.biography h2 {
+    font-size: 35px;
+    margin-bottom: 20px;
+}
+
+.biography p {
+    line-height: 30px;
+    letter-spacing: 2px;
+    margin-bottom: 20px;  
+}
+
+.biography p span {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.castImageBlock {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 30px 0;
+}
+
+.castImageBlock h3,
+.castMoviesBlock h3 {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.castImage {
+    width: 170px;
+    margin: 20px;
+}
+
+.castImage img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.castImageBlock ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    justify-content: center;
+}
+
+.castMoviesBlock {
+    text-align: center;
+}
+
+.moviesList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+
+@media (max-width: 1200px) {
+    .castInfo {
+        padding: 0 5%;  
+    }
+}
+
+@media (max-width: 1024px) {
+    .moviesList {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 980px) {
+    .castInfo {
+        flex-direction: column;
+        padding: 0 ;
+        align-items: center;
+    }
+
+    .biography {
+        width: 90%;
+        align-items: center;
+    }
+
+    .castPhoto {
+        max-width: 250px;
+     }
+}
+
+@media (max-width: 768px) {
+    .biography h2 {
+        font-size: 30px;
+    }
+
+    .castImage {
+        margin: 10px;
+    }
+    
+    .biography p {
+        font-size: 16px;
+    }
+
+    .biography p span {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 426px) {
+    .biography {
+        width: 100%;
+    }
+}

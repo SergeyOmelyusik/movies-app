@@ -1,0 +1,115 @@
+.menu {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.8);
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    top: 0;
+    right: 0;
+    transition: all 0.3s linear;
+    transform: translateY(-100%);
+}
+
+.menuActive {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.8);
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    top: 0;
+    right: 0;
+    transition: all 0.3s linear;
+    transform: translateY(0);
+    z-index: 2;
+}
+ 
+.linkList {
+    list-style: none;  
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.subLinksList {
+    display: none;
+    list-style: none;
+    padding: 30px 0;
+}
+
+.linkList li {
+    margin: 20px 40px;
+    position: relative;
+}
+
+.link {
+    text-decoration: none;
+    font-size: 30px;
+    color: #fff;
+    font-family: 'Monoton', cursive;
+    transition: all 0.3s linear;
+    position: relative;
+    padding-bottom: 40px;  
+}
+
+.subLinksList li {
+    margin: 0;
+    padding: 10px 0;
+}
+
+.subLinksList .subLink {
+    text-decoration: none;
+    font-size: 25px;
+    color: #fff;
+    font-family: 'Monoton', cursive;
+    transition: all 0.3s linear;
+    position: relative;
+}
+
+.subLink {
+    white-space: nowrap;
+}
+
+.link:hover, 
+.subLink:hover{
+    color: rgb(247, 66, 66);
+    transition: all 0.3s linear;
+}
+
+.linkList li:hover .subLinksList {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 40px;
+}
+
+.btn__close {
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    color: #fff;
+    background-color: transparent;
+    width: 50px;
+    height: 50px;
+    background-image: url(../../../assets/images/close.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+@media (max-width: 1024px) {
+    
+    .linkList {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .linkList li {
+        margin: 20px 0;
+    }
+}

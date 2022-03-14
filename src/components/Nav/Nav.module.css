@@ -1,0 +1,119 @@
+.nav {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.burger__btn {
+    width: 30px;
+    height: 25px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.burger__btn span {
+    display: block;
+    width: 30px;
+    height: 2px;
+    border-radius: 2px;
+    background-color: #fff;
+}
+
+.burger__btn::before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 30px;
+    height: 2px;
+    border-radius: 2px;
+    background-color: #fff;
+    top: 0;
+}
+
+.burger__btn::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 30px;
+    height: 2px;
+    border-radius: 2px;
+    background-color: #fff;
+    bottom: 0;
+}
+
+.logo {
+    text-decoration: none;
+    font-family: 'Monoton', cursive;
+    font-size: 35px;
+    color: rgb(247, 66, 66);
+}
+
+.search {
+    position: relative;
+    border: 2px solid rgb(240, 233, 233);
+    border-radius: 40px;
+    padding: 5px 20px;
+}
+
+.search input {
+    max-width: 80%;
+    background-color: transparent;
+    color: #fff;
+    font-size: 16px;
+    border: none;
+    padding: 5px 0;
+    outline: none;
+    
+}
+
+.search::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    right: 0;
+    top: -6px;
+    background-image: url(../../assets/images/search.png);
+    background-position: center right 20px;
+    background-repeat: no-repeat;   
+}
+
+@media (max-width: 800px) {
+    .nav {
+     margin-bottom: 0;
+    }
+}
+
+@media(max-width: 720px) {
+    .nav {
+        flex-direction: column;
+    }
+
+    .burger__btn {
+        order: 0;
+        margin-bottom: 10px;
+    }
+
+    .logo {
+        order: -1;
+        margin-bottom: 30px;
+    }
+    .search {
+        margin-bottom: 20px;
+        margin-top: 15px;
+    }
+
+    .search input {
+       order: 1;
+       
+    }
+    .search input {
+        font-size: 14px;     
+    }
+}
+

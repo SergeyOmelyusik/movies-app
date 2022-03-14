@@ -1,0 +1,50 @@
+.container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.promoContainer {
+    max-width: 90%;
+}
+
+.movieList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    margin-bottom: 30px;
+}
+
+.popularMovies h2,
+h2 {
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+.more {
+    text-align: left;
+    text-decoration: none;
+    color: #fff;
+    font-size: 22px;
+    letter-spacing: 2px;
+    padding: 5px 25px;
+    border: 2px solid rgba(235, 32, 32, 0.2);
+    margin-bottom: 30px;
+
+}
+
+@media (max-width: 625px) {
+    .movieList {
+        justify-content: center; 
+    }
+    
+}
+
+@media (max-width: 375px) {
+    
+    
+}

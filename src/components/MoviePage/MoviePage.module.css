@@ -1,0 +1,342 @@
+.moviePromo {
+    width: 100%;
+    min-height: 500px;
+    position: relative;
+    margin: 30px 0;
+}
+
+.moviePromo img {
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+    opacity: 0.4;
+}
+
+.moviePromo .movieInfo {
+    position:absolute;
+    width: 90%;
+    top: 45%;
+    left: 5%;
+    display: flex;
+    height: 50%;
+    justify-content: space-between;
+    font-size: 24px;
+}
+
+.movieInfo p span,
+.movieInfoRight ul span { 
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.movieTitle {
+    font-size: 40px;
+    position: absolute;
+    top: 15%;
+    left: 5%;
+}
+
+.average {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 10px 30px;
+    background-color: rgba(247, 66, 66, 0.8);
+}
+
+.btnAdd {
+    padding: 10px 20px;
+    max-width: 200px;
+    background-color: rgba(247, 66, 66, 0.8);
+    color: #fff;
+    border: none;
+    font-size: 20px;
+    position: absolute;
+    z-index: 2;
+    cursor: pointer;
+}
+
+.btnAdd:disabled {
+    opacity: 0.7;
+    cursor: auto;
+}
+
+.movieInfoLeft,
+.movieInfoRight {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 40%;
+}
+
+.movieInfoRight ul {
+    display: flex;
+    list-style: none;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.movieInfoRight ul li {
+    margin: 0 10px;
+}
+
+.movieInfoRight ul span {
+    font-weight: bold;
+}
+
+
+.movieDescription {
+    text-align: center;
+    margin: 50px 0; 
+}
+
+.movieDescription h2,
+.casts h2, 
+.similarMovies h2 {
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+.movieDescription p {
+    line-height: 35px;
+    font-size: 20px;
+}
+
+.castPhoto {
+    width: 200px;
+    height: 200px;
+}
+
+.castPhoto img {
+    object-fit: contain;
+    height: 100%;
+    width: 100%;
+}
+
+.casts {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.mySwiper {
+    height: 350px;
+}
+
+.casts ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+}
+
+.casts ul li {
+    padding: 15px;
+    /* border: 2px solid rgba(247, 66, 66, 0.2); */
+    margin: 15px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+}
+
+.castInfo a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.opacity {
+    opacity: 0.5;
+}
+
+.trailersBlock {
+    padding: 10px 0;
+}
+
+.trailersList {
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    list-style: none;
+}
+
+.trailersList li {
+    width: 90%;
+    height: 550px;
+    margin: 20px;
+    padding: 0 60px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.trailersList li h3 {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.movieList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+
+.reviewsList {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.review {
+    display: flex;
+    width: 80%;
+    justify-content: space-between;
+    padding: 20px;
+    border: 1px solid rgba(247, 66, 66, 0.2);
+    margin: 20px 0;
+    max-height: 250px;
+}
+
+.authorInfo {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    justify-content: center;
+    text-align: center;
+    padding: 0 10px;
+    align-items: center;
+    border-right: 1px solid rgba(247, 66, 66, 0.2);
+}
+
+.authorInfo span {
+    font-size: 20px;
+    display: block;
+}
+
+.authorImage img {
+    border-radius: 50%;
+}
+
+.reviewText {
+    flex: 4;
+    overflow-y: scroll;
+    padding: 20px;
+}
+
+.reviewText::-webkit-scrollbar {
+    width: 0;               
+}
+  
+@media (max-width:1024px) {
+    .moviePromo .movieInfo {
+        top: 30%;
+        flex-direction: column;
+    }
+
+    .movieInfoLeft,
+    .movieInfoRight {
+    width: 100%;
+    }
+
+    .movieList {
+        justify-content: space-evenly;
+    }
+}
+
+@media (max-width: 850px) {
+    .movieInfo p span,
+    .movieInfoRight ul span { 
+        font-size: 24px;
+    }
+}
+
+@media (max-width:768px) {
+    .moviePromo  {
+        margin-top: 0;
+        min-height: 0;
+    }
+
+    .movieTitle {
+        font-size: 22px;
+    }
+
+    .moviePromo .movieInfo {
+        font-size: 16px;
+    }
+
+    .movieDescription h2,
+    .casts h2, 
+    .similarMovies h2 {
+    font-size: 22px;
+    }
+
+    .movieDescription p {
+    font-size: 16px;
+    }
+
+    .trailersList li {
+        width: 100%;
+        height: 500px;
+        margin: 20px;
+        padding: 0;
+        border-radius: 20px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 630px) {
+    .moviePromo {
+        height: 300px;
+    }
+
+    .moviePromo img {
+        object-fit: cover;
+    }
+    .review {
+        width: 90%;
+        flex-direction: column;
+        max-height: 300px;
+    }
+
+    .authorInfo {
+        border-bottom: 1px solid rgba(247, 66, 66, 0.2);
+        margin-bottom: 20px;
+        border-right: none;
+        padding-bottom: 10px;
+    }
+
+    .reviewText {
+        padding: 0;
+    }
+}
+
+@media (max-width: 550px) {
+
+    .average {
+        padding: 5px 20px;    
+    }
+
+    .btnAdd {
+        padding: 5px 15px;
+        font-size: 18px;
+    }
+
+
+    .movieInfo { 
+        font-size: 20px;
+    }
+
+    .movieInfo p span,
+    .movieInfoRight ul span { 
+        font-size: 20px;
+    }
+}
+
+
+
+
