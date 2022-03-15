@@ -4,6 +4,7 @@
     left: 1%;
     max-width: 60px;
     max-height: 60px;
+    z-index: 2;
 }
 
 .widgetContainer span {
@@ -23,8 +24,5 @@
     .widgetContainer {
         position: absolute;
         top: 2%;
-        left: none !important;
-        right: 0 ;
-        z-index: 2;
     }
 } 
