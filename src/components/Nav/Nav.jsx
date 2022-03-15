@@ -5,6 +5,8 @@ import axios from "axios";
 import { AppContext } from "../../App";
 import style from './Nav.module.css'
 import { API_KEY } from "../Api";
+import { debounce } from "lodash";
+import WatchListWidget from "./WatchListWidget/WatchListWidget";
 
 const Nav = () => {
     const {menuActive, setMenuActive, searchTerm, setSearchTerm, setSearchResults, searchPage, setSearchPage, setTotalSearchPages } = useContext(AppContext)
@@ -13,9 +15,9 @@ const Nav = () => {
         event.preventDefault()
     }
 
-    const handleOnChange = (event) => {
+    const handleOnChange = debounce((event) => {
         setSearchTerm(event.target.value)
-    }
+    },500)
 
     function getData() {
         axios
@@ -40,16 +42,24 @@ const Nav = () => {
 
     return (
         <nav className={style.nav}>
-            <div className={style.burger__btn} onClick={()=> setMenuActive(!menuActive)}>
-                <span></span>
+            <div className={style.navItem}>
+                <div className={style.burger__btn} onClick={()=> setMenuActive(!menuActive)}>
+                    <span></span>
+                </div>
+               
             </div>
+            
+            <div className={style.navItem}>
+                <div><NavLink to={'./'} className={style.logo} >MoviesApp</NavLink></div>
+            </div>
+            
 
-            <div><NavLink to={'./'} className={style.logo} >MoviesApp</NavLink></div>
-
-            <div className={style.search}>
-                <form onSubmit={handleOnSubmit}>
-                     <input type="text" onChange={handleOnChange} value={searchTerm} placeholder="Search movie"/>
-                </form>
+            <div className={style.navItem}>
+                <div className={style.search}>
+                    <form onSubmit={handleOnSubmit}>
+                        <input type="text" onChange={handleOnChange} placeholder="Search movie"/>
+                    </form>
+                </div>
             </div>
         </nav>
     )

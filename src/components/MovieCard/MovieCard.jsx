@@ -5,12 +5,13 @@ import { AppContext } from "../../App"
 import { IMAGE_API } from "../Api"
 import style from './MovieCard.module.css'
 import imageNotFound from './../../assets/images/no-photo.png'
+import heartAdd from './../../assets/images/heart-add.png'
 
 const MovieCard = (props) => {
 
-    const {watchList, addToWatchList, searchTerm, setSearchTerm} = useContext(AppContext)
+    const {watchList, addToWatchList, setSearchTerm} = useContext(AppContext)
     let storedMovie = watchList.find(movie => movie.id === props.id)
-    const watchListDisabled = storedMovie ? true : false
+    const watchListAdded = storedMovie ? true : false
     
     return(
         <li className={style.movie}>
@@ -20,7 +21,7 @@ const MovieCard = (props) => {
 
             <div className={style.movieAverage}>{props.vote_average}</div>
 
-            <button onClick={() => {addToWatchList(props)}} className={style.btnAdd} disabled={watchListDisabled}>Add to WatchList</button>
+            <button onClick={() => {addToWatchList(props)}} className={watchListAdded ? style.btnAddAdded : style.btnAdd}></button>
 
             <div className={style.movieInfo}>
                 {props.release_date ? <p className={style.movieYear}>{props.release_date.slice(0,4)}</p> : <p className={style.movieYear}>-</p>}

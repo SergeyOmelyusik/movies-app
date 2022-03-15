@@ -31,7 +31,7 @@ const PromoSlider = ({results}) => {
                         
                         <div className="info">
                             <h2><Link className="slider-title" to={"/movie/" + item.id +"/"}> {item.title} </Link></h2>
-                            <p className="release-date">Release Date: {item.release_date}</p>
+                            <p className="release-date">Release Date: {item.release_date.split('-').reverse().join('.')}</p>
                         </div>
                         
                     </SwiperSlide>)

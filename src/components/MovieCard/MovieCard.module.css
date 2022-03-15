@@ -55,24 +55,47 @@
     color: #fff;
 }
 
-.btnAdd {
+.btnAdd,
+.btnAddAdded{
+    transition: all 0.5s ease-out;
+    display: flex;
+    align-items:center;
+    justify-content: center;
     position: absolute;
     top: 0;
     left: 0;
-    padding: 10px 20px;
-    background-color: rgba(235, 32, 32, 0.8);
-    color: #fff;
+    width: 50px;
+    height: 50px;
+    background: rgba(235, 32, 32, 0.6);
     border: none;
     cursor: pointer;
 }
 
-.btnAdd:disabled {
+.btnAddAdded {
     opacity: 0.7;
 }
 
-.movieAverage.or {
-    color: red;
+.btnAdd::after,
+.btnAddAdded::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 48px;
+    height: 48px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
 }
+
+.btnAdd::after {
+    background-image: url(../../assets/images/heart-add.png);
+}
+
+.btnAddAdded::after {
+    background-image: url(../../assets/images/heart-delete.png);
+}
+
+
 
 @media (max-width:900px) {
     .movie {

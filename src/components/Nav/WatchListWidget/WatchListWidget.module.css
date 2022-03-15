@@ -1,0 +1,30 @@
+.widgetContainer {
+    position: fixed;
+    bottom: 2%;
+    left: 1%;
+    max-width: 60px;
+    max-height: 60px;
+}
+
+.widgetContainer span {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    top: -5px;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: rgba(247, 66, 66, 1);
+}
+
+ @media (max-width: 500px) {
+    .widgetContainer {
+        position: absolute;
+        top: 2%;
+        left: none !important;
+        right: 0 ;
+        z-index: 2;
+    }
+} 

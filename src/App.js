@@ -15,6 +15,7 @@ import TopRatedMovies from './pages/Movies/TopRatedMovies/TopRatedMovies';
 import PlayingNow from './pages/Movies/PlayingNow/PlayingNow';
 import TrandingMovies from './pages/Movies/Tranding/Tranding';
 import GenresPage from './pages/Genres/GenresPage';
+import WatchListWidget from './components/Nav/WatchListWidget/WatchListWidget';
 
 
 const AppContext = React.createContext()
@@ -31,8 +32,14 @@ function App() {
     let [totalSearchPages, setTotalSearchPages] = useState(null)
 
     function addToWatchList(movie) {
-            watchList.push(movie)
-            setWatchList([...watchList])
+        let watchListTmp = watchList
+        
+        if(watchList.map(m => m.id).indexOf(movie.id) !== -1) {
+            watchListTmp = watchListTmp.filter(item => item.id !== movie.id)
+        } else {
+            watchListTmp.push(movie)  
+        }
+            setWatchList([...watchListTmp])
             localStorage.setItem('watchlist', JSON.stringify(watchList))
     }
 
@@ -64,6 +71,7 @@ function App() {
             <BrowserRouter>
                 <div className="app">
                         <Header />
+                        <WatchListWidget />
                          <Routes>
                             <Route path="/" element={<Movies />} />
                             <Route path='/genres' element={<GenresPage />} />

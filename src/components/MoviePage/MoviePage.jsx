@@ -98,7 +98,7 @@ const MoviePage = () => {
         window.scroll(0,0)
         setLoading(true)  
     }, [id])
-    
+
     return(
         <>
         { searchTerm ? (<Search />) : (!loading ? (<Loader />) :(
@@ -117,7 +117,7 @@ const MoviePage = () => {
 
                         <div className={style.movieInfoLeft}>
 
-                            {movie.release_date ? <p><span>Release:</span> {movie.release_date}</p> : <p>Release:-</p>}
+                            {movie.release_date ? <p><span>Release:</span> {movie.release_date.split('-').reverse().join('.')}</p> : <p>Release:-</p>}
 
                             {movie.runtime ? <p><span>Duration:</span> {getTimeFromMins(movie.runtime)}</p> :  <p><span>Duration:-</span></p>}
                         
