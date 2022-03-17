@@ -165,7 +165,7 @@
 }
 
 .trailersList li {
-    width: 90%;
+    width: 95%;
     height: 550px;
     margin: 20px;
     padding: 0 60px;
@@ -297,6 +297,7 @@
     .moviePromo img {
         object-fit: cover;
     }
+
     .review {
         width: 90%;
         flex-direction: column;
@@ -327,14 +328,29 @@
     }
 
 
-    .movieInfo { 
-        font-size: 20px;
-    }
-
     .movieInfo p span,
     .movieInfoRight ul span { 
         font-size: 20px;
     }
+}
+
+@media (max-width: 350px) {
+
+    .movieTitle {
+        font-size: 20px;
+        left: 2%;
+    }
+
+    .moviePromo .movieInfo { 
+        top: 40%;
+        font-size: 16px;
+    }
+
+    .movieInfo p span,
+    .movieInfoRight ul span { 
+        font-size: 16px;
+    }
+    
 }
 
 

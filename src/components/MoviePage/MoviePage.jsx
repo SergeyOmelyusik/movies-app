@@ -198,7 +198,8 @@ const MoviePage = () => {
                            {trailer && trailer.map((item, index) => {
                                return (
                                     <li key={index}>
-                                        <YouTube videoId={item.key} opts={{width: '100%', height:'500',}}/>
+                                        {/* <YouTube videoId={item.key} opts={{width: '100%', height:'500',}}/> */}
+                                        <iframe width="90%" height="500" src={`https://www.youtube.com/embed/${item.key}`} title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen frameBorder={0}></iframe>
                                     </li>
                                )
                            })}
